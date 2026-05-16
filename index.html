@@ -244,7 +244,7 @@
                 <img src="https://lalopaniagua.github.io/homepage/portrait.png" alt="Eduardo Paniagua">
             </div>
             <h1>Eduardo Paniagua</h1>
-            <div class="title" id="titleDisplay">Data Analyst | Computer Engineer</div>
+            <div class="title" id="titleDisplay">Jr Data Analyst | Computer Engineer</div>
         </div>
         
         <div class="sidebar-section">
@@ -277,7 +277,7 @@
             <div class="section-title"><i class="fas fa-award"></i> <span id="certTitle">Certificaciones</span></div>
             <div class="cert-item" onclick="window.open('https://drive.google.com/file/d/1xPGuGzzhXSKfSkp90iTE8XMqnDZhrcub/view?usp=drive_link', '_blank')">
                 <i class="fas fa-language"></i>
-                <div><strong>Cambridge FCE</strong><br><small>B2 First Certificate</small></div>
+                <div><strong>Cambridge FCE</strong><br><small>C1 First Certificate</small></div>
             </div>
             <div class="cert-item" onclick="window.open('https://drive.google.com/file/d/1xA4pSa4I_uVQZGowGh_AcIZuRcxDl_6h/view?usp=drive_link', '_blank')">
                 <i class="fas fa-chart-line"></i>
@@ -294,7 +294,7 @@
 <script>
     const translations = {
         es: {
-            title: "Analista de Datos | Ing. en Computación",
+            title: "Analista de Datos Jr | Ing. en Computación",
             stackTitle: "Ecosistema Técnico",
             contactTitle: "Conexión",
             projectsTitle: "Proyectos Destacados",
@@ -303,13 +303,14 @@
             copiedToast: "Correo copiado con éxito",
             viewCode: "Explorar Código",
             projects: [
-                { name: "Fintech Real-Time Pipeline", desc: "Pipeline ETL automatizado para el monitoreo de activos financieros y criptomonedas. Optimización de latencia en la ingesta de datos.", tags: ["Python", "Pandas", "Yahoo Finance API"] },
-                { name: "Market Expansion Analytics", desc: "Análisis masivo de datos del Censo de EE.UU. para identificar oportunidades de mercado mediante segmentación demográfica.", tags: ["Python", "REST API", "Matplotlib"] },
-                { name: "TCS Marketing Dashboard", desc: "Dashboard ejecutivo interactivo para el seguimiento de KPIs de marketing digital, diseñado para la toma de decisiones.", tags: ["PowerBI", "DAX", "SQL"] }
+                { name: "Multi-channel Marketing Dashboard", desc: "Este proyecto recrea un tablero de control de marketing profesional a través de múltiples canales digitales para demostrar experiencia en procesos ETL, visualización de datos e inteligencia de negocios.", tags: ["Python", "Pandas", "Yahoo Finance API"], url: "https://github.com/LaloPaniagua/Improvado-jr-analyst-homework-submission" },
+                { name: "Market Expansion Analytics", desc: "Análisis masivo de datos del Censo de EE.UU. para identificar oportunidades de mercado mediante segmentación demográfica.", tags: ["Python", "REST API", "Matplotlib"], url: "https://github.com/LaloPaniagua/market-expansion-analytics" },
+                { name: "Market Expansion Analytics", desc: "Large-scale US Census data analysis to identify market opportunities through demographic segmentation.", tags: ["Python", "REST API", "Matplotlib"], url: "https://github.com/LaloPaniagua/market-expansion-analytics" },
+                { name: "Health Insurance Cost Report", desc: "Tablero interactivo en PowerBI que analiza los costos de seguros médicos según variables demográficas clave (edad, IMC, tabaquismo y región).", tags: ["PowerBI", "DAX", "SQL"], url: "https://github.com/LaloPaniagua/PowerBI-Health-Insurance-Report" }
             ]
         },
         en: {
-            title: "Data Analyst | Computer Engineer",
+            title: "Jr Data Analyst | Computer Engineer",
             stackTitle: "Technical Ecosystem",
             contactTitle: "Connect",
             projectsTitle: "Featured Projects",
@@ -318,9 +319,10 @@
             copiedToast: "Email copied to clipboard",
             viewCode: "Explore Code",
             projects: [
-                { name: "Fintech Real-Time Pipeline", desc: "Automated ETL pipeline for financial asset and crypto monitoring. Latency optimization in data ingestion.", tags: ["Python", "Pandas", "Yahoo Finance API"] },
-                { name: "Market Expansion Analytics", desc: "Large-scale US Census data analysis to identify market opportunities through demographic segmentation.", tags: ["Python", "REST API", "Matplotlib"] },
-                { name: "TCS Marketing Dashboard", desc: "Interactive executive dashboard for tracking digital marketing KPIs, designed for decision-making.", tags: ["PowerBI", "DAX", "SQL"] }
+                { name: "Multi-channel Marketing Dashboard", desc: "This project replicates a professional marketing dashboard across multiple digital channels to demonstrate expertise in ETL, data visualization, and business intelligence.", tags: ["Python", "Pandas", "Yahoo Finance API"], url: "https://github.com/LaloPaniagua/Improvado-jr-analyst-homework-submission" },
+                { name: "Market Expansion Analytics", desc: "Large-scale US Census data analysis to identify market opportunities through demographic segmentation.", tags: ["Python", "REST API", "Matplotlib"], url: "https://github.com/LaloPaniagua/market-expansion-analytics" },
+                { name: "Market Expansion Analytics", desc: "Large-scale US Census data analysis to identify market opportunities through demographic segmentation.", tags: ["Python", "REST API", "Matplotlib"], url: "https://github.com/LaloPaniagua/market-expansion-analytics" },
+                { name: "Health Insurance Cost Report", desc: "Interactive PowerBI dashboard analyzing medical insurance costs across key demographics (age, BMI, smoking status, and region).", tags: ["PowerBI", "DAX", "SQL"], url: "https://github.com/LaloPaniagua/PowerBI-Health-Insurance-Report" }
             ]
         }
     };
@@ -344,7 +346,7 @@
                 <h4>${p.name}</h4>
                 <p>${p.desc}</p>
                 <div style="margin-bottom:1.5rem">${p.tags.map(t => `<span class="tech-pill">${t}</span>`).join('')}</div>
-                <a href="https://github.com/LaloPaniagua" target="_blank" style="color:var(--accent-color); font-weight:800; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">
+                <a href="${p.url}" target="_blank" style="color:var(--accent-color); font-weight:800; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">
                     ${translations[currentLang].viewCode} <i class="fas fa-arrow-right"></i>
                 </a>
             `;
